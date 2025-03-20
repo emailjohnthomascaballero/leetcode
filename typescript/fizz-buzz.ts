@@ -6,7 +6,6 @@
 // answer[i] == "Fizz" if i is divisible by 3.
 // answer[i] == "Buzz" if i is divisible by 5.
 // answer[i] == i (as a string) if none of the above conditions are true.
- 
 
 // Example 1:
 
@@ -21,26 +20,32 @@
 // Input: n = 15
 // Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
 
-function fizzBuzz(n: number): any {
+function fizzBuzz(n: number): string[] {
   let arr = [];
-    for (let i = 1; i <= n; i++) {
-      // arr.push(i.toString())
-      let result = '';
-      if ( (i % 3) == 0 && (i % 5) == 0) {
-        result = 'FizzBuzz'
-      } else if ((i % 5) == 0) {
-        result = 'Buzz'
-      } else if ((i % 3) == 0) {
-        result = 'Fizz'
-      } else {
-        result = i.toString()
-      }
-      arr.push(
-        result
-      )
-    }
-    return arr
-};
+  for (let i = 1; i <= n; i++) {
+    // arr.push(i.toString())
+    // let result = '';
+    // if ( (i % 3) == 0 && (i % 5) == 0) {
+    //   result = 'FizzBuzz'
+    // } else if ((i % 5) == 0) {
+    //   result = 'Buzz'
+    // } else if ((i % 3) == 0) {
+    //   result = 'Fizz'
+    // } else {
+    //   result = i.toString()
+    // }
+    let result =
+      i % 3 == 0 && i % 5 == 0
+        ? "FizzBuzz"
+        : i % 5 == 0
+        ? "Buzz"
+        : i % 3 == 0
+        ? "Fizz"
+        : i.toString();
+    arr.push(result);
+  }
+  return arr;
+}
 
 console.log(fizzBuzz(3));
 console.log(fizzBuzz(5));

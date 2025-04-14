@@ -36,8 +36,8 @@
 
 // 0 <= num <= 106
 
-function numberOfSteps(num: number): number {
-    return num;
+function numberOfSteps(num: number): any {
+    return num % 2 == 0;
 };
 
-console.log(numberOfSteps(123));
+console.log(numberOfSteps(14));

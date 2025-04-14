@@ -37,7 +37,7 @@
 // 0 <= num <= 106
 
 function numberOfSteps(num: number): any {
-    return num % 2 == 0;
+    return num % 2 == 0 ? num / 2 : num - 1;
 };
 
 console.log(numberOfSteps(14));
